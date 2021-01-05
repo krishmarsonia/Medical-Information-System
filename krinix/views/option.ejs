@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pagetitle %></title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/public/option.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">MIS</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <!-- <li><a href="#">Page 1</a></li>
+            <li><a href="#">tips of the day</a></li> -->
+          <li><a href="/aboutus">About us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <h1>Welcome to MIS</h1>
+    <h2>select your choice</h2>
+    <br>
+    <br>
+    <form action="/index">
+      <input class="btn1" type="submit" value="search medicine" />
+    </form>
+    <form action="/add-medicine">
+        <input class="btn2" type="submit" value="Add medicine" />
+      </form>
+  </body>
+</html>

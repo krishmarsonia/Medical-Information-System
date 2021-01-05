@@ -1,0 +1,41 @@
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+/* form{
+    margin-left: 400px;
+} */
+
+.btn1{
+    height: 70px;
+    border-radius: 1px;
+    float: left;
+    margin-left: 450px;
+    background-color: #013c6f;
+    color: yellow;
+    font-weight: bold;
+}
+
+.btn2{
+    height: 70px;
+    border-radius: 1px; 
+    float: right;
+    margin-right: 475px;
+    background-color: #013c6f;
+    color: yellow;
+    font-weight: bold;
+}
+
+.btn1:hover{
+    height: 72px;
+    width: 130px;
+    border: rgba(0, 143, 19, 0.747) 3px solid;
+}
+
+.btn2:hover{
+    height: 72px;
+    width: 120px;
+    border: rgba(0, 143, 19, 0.747) 3px solid;
+}

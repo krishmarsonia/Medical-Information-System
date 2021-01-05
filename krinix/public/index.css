@@ -1,0 +1,69 @@
+/*h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}*/
+button{
+    height: 60px;
+    width: 80px;
+    margin-left: 650px;
+}
+
+button:hover{
+    border: solid 1px #000000;
+    background-color: blue;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.krish{
+    margin-left: 575px;
+}
+
+.medicine{
+    height: 60px;
+    width: 80px;
+    margin-left: 640px;
+}
+
+img{
+    height: 200px;
+    width: 200px;
+    margin-left: 615px;
+}
+
+form{
+    margin-left: 575px;
+}
+
+.search{
+    margin-left: 100px;
+}
+
+.search:hover{
+    
+        background-color: blue;
+        color: black;
+        font-weight: bold;
+}
+.box{
+    padding-left: 23px;
+    margin-left: 33px;
+}
+
+.flex-container {
+    display: flex;
+    background-color: DodgerBlue;
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    margin-left:200px;
+    width: 200px;
+    height:200px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= PageTitle %></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/public/medicinelist.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">MIS</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
+          <!-- <li><a href="/index">Home</a></li>
+      <li><a href="#">Page 2</a></li> -->
+          <li><a href="/views/aboutus.html">About us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <% if (medic.length > 0) { %>
+      <% for(let krish of medic) { %>
+      <article class="card product-item" id="card__krish">
+        <header class="card__header">
+            <h1 class="product__title"><b><%= krish.medic %></b></h1>
+        </header>
+        <div class="card__image">
+            <img src="https://image.shutterstock.com/image-photo/pharmaceuticals-antibiotics-pills-medicine-colorful-260nw-1061962874.jpg"
+                alt="A Book">
+        </div>
+        <div class="card__content">
+            <h2 class="product__price">$19.99</h2>
+            <p class="product__description">A medicine which can cure all the diseas</p>
+        </div>
+        <div class="card__actions">
+            <button class="btn">Add to Cart</button>
+        </div>
+    </article>
+    <% } %>
+    <% } else { %>
+
+    <div class="container">
+      <h1>Medicine List</h1>
+      <p>No medicine found</p>
+      <!-- <button >details</button>
+  <button>buy</button> -->
+      <% } %>
+    </div>
+  </body>
+</html>
