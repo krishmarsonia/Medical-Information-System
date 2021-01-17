@@ -14,7 +14,6 @@ const medicineRoutes = require("./routes/medicine");
 const aboutusRoutes = require("./routes/aboutus");
 const shopRoutes = require("./routes/shop");
 
-const hostname = "localhost";
 
 const port = process.env.PORT || 7000;
 
@@ -51,7 +50,7 @@ app.use(express.static(__dirname + "/krinix")); //this is for sending file don't
 //   }
 // });
 
-app.use((req, res, next) => {
+app.use((err,req, res, next) => {
   // res.statusCode = 404;
   // res.sendFile(path.join(__dirname, '/krinix', '/views', '/404.html'));
   res.status(404).render("404", { pageTitle: "404 Not found" });
@@ -59,6 +58,6 @@ app.use((req, res, next) => {
 
 // const server = http.createServer(app);
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
   console.log("Server running");
 });
