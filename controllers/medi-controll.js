@@ -25,6 +25,8 @@ exports.mychoice = (req, res, next) => {
 };
 exports.medicine_list = (req, res, next) => {
   // const modi = mediadd.medicine;
-  const medicine = Medicine.fetchall();
-  res.render("medicinelist", { PageTitle: "Medicine List", medic: medicine });
+  Medicine.fetchall((medicine) => {
+    res.render("medicinelist", { PageTitle: "Medicine List", medic: medicine });
+  });
+  
 };
