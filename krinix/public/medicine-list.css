@@ -1,0 +1,33 @@
+#title{
+    text-align: center;
+}
+#img{
+    /* margin-left: 130px; */
+}
+#details-btn{
+    margin-left: 170px;
+    /* padding: 3px; */
+}
+#buy-btn{
+    margin-left: 30px;
+}
+#side-by-side{
+  display: inline-block;
+  margin-left: 300px;
+  padding-right: 30px;
+  position: absolute;
+  
+  /* margin-right: 80px; */
+  /* flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch; */
+ 
+}
+#side-by-side1{
+   /* margin-left: -20px; */
+}
+
+#side-by-side2{
+    padding-right: 30px;
+    right: 30px;
+}

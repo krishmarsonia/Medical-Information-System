@@ -1,35 +1,51 @@
-// const medicine = [];
-const fs = require('fs');
-const path = require('path');
+const Sequelize = require("sequelize");
+const { UUIDV4 } = require('sequelize');
 
-module.exports = class Medicine{
-    constructor(t){
-        this.title = t;
-        // console.log(this.title);
-    }
+const sequelize = require("../util/database");
 
-    save(){
-        const p = path.join(path.dirname(process.mainModule.filename), 'data', 'medicine.json');
-        // medicine.push(this.title);
-        fs.readFile(p, (err, fileContent) => {
-            let medicine = [];
-            if (!err){
-                medicine = JSON.parse(fileContent);
-            }
-            medicine.push(this);
-            fs.writeFile(p, JSON.stringify(medicine), (err) => {
-                console.log(err);
-            });
-        });
-    }
+const user = require("./user");
 
-    static fetchall(cb){
-        const p = path.join(path.dirname(process.mainModule.filename), 'data', 'medicine.json');
-        fs.readFile(p, (err, fileContent) => {
-            if(err){
-                cb([]);
-            }
-            cb(JSON.parse(fileContent));
-        })
-    }
-}
+const medicine = sequelize.define("medicine", {
+  id: {
+    type: Sequelize.INTEGER,
+    autoIncrement: true,
+    primaryKey: true,
+    allowNull: false,
+  },
+  title: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  imageUrl: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  manufacturer: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  sc: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  uses: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  price: {
+    type: Sequelize.DOUBLE,
+    allowNull: false,
+  },
+  userId: {
+    type: Sequelize.UUID,
+    defaultValue: UUIDV4,
+    primaryKey: true,
+    allowNull: false,
+  },
+});
+
+user.hasMany(medicine, {
+  foreignKey: "userId",
+});
+
+module.exports = medicine;

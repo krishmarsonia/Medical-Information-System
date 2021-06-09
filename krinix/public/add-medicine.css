@@ -1,0 +1,88 @@
+ .form{
+    margin: 0 auto;
+    width: 600px;
+}
+.left{
+    float: right;
+    width: 55%;
+    margin-right: 40px;
+    border: #222 1px solid;
+}
+.right{
+    /* float: left; */
+    margin-left: 65px;
+}
+.add-btn{
+    margin-left: 470px;
+    background-color: white;
+    color: #222;
+    border: solid #222 1px;
+    border-radius: 5px;
+    height: 29px;
+}
+.add-btn:hover{
+    /* background-color: rgb(47, 198, 248); */
+    background-color: #222;
+    color: white;
+    border: solid white 1px;
+}
+
+#login-1{
+    margin-bottom: 20px;
+}
+
+#login-form{
+    margin-top: 60px;
+}
+
+#login-h2{
+    text-align: center;
+}
+
+#login-btn{
+    margin-top: 20px;
+    margin-left: 512px;
+
+}
+
+#signup-3{
+    margin-top: 20px;
+}
+
+#signup-btn{
+    margin-top: 20px;
+    margin-left: 496px;
+}
+
+.logout-btn{
+    margin-top: 13px;
+    color: #9d9d9d;
+    background-color: #222; 
+    border: solid 1px #222;
+}
+
+.logout-btn:hover{
+    color: white;
+}
+/*
+.form label{
+    display: flex;
+    /* text-align: right; */
+    /* float: left; */
+/* } */
+/* .form input{
+    display: flex;
+    float: right;
+    /* margin-left: 120px; */
+/* } */
+/* .left {
+    width: 30%;
+    float: left;
+    /* margin-right: 50px; */
+    /* text-align: right;
+} */
+/*.right {
+    width: 30%;
+    margin-left: 10px;
+    float:left;
+} */

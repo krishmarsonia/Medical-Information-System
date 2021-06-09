@@ -36,40 +36,41 @@
     <br>
     <br>
     <div class="form">
-      <form action="/adds-medicine" method="POST">
+      <form action="/edit-medicine" method="POST">
         <div class="text-bar">
           <!-- <input type="text" class="add" name="medicine"> -->
           <label class="right" for="title">Title: </label>
-          <input class="left <% if(validationError  === 'title') { %> invalid <% } else { %> '' <% } %> %>" type="text" name="title" id="title" value="<%= oldInput.title %>">
+          <input class="left <% if(validationError  === 'title') { %> invalid <% } else { %> '' <% } %> %>" type="text" name="title" id="title" value="<%= medicine.title %>">
         </div>
         <br>
         <div class="text-bar">
           <label class="right" for="imageUrl">Image URL: </label>
-          <input class="left <% if(validationError  === 'imageUrl') { %> invalid <% } else { %> '' <% } %> %>" type="text" name="imageUrl" id="imageUrl" value="<%= oldInput.imageUrl %>">
+          <input class="left <% if(validationError  === 'imageUrl') { %> invalid <% } else { %> '' <% } %> %>" type="text" name="imageUrl" id="imageUrl" value="<%= medicine.imageUrl %>">
         </div>
         <br>
         <div class="text-bar">
           <label class="right" for="manufacturer">Manufacturer: </label>
-          <input class="left <% if(validationError  === 'manufacturer') { %> invalid <% } else { %> '' <% } %> %>" type="text" name="manufacturer" id="manufacturer" value="<%= oldInput.manufacturer %>">
+          <input class="left <% if(validationError  === 'manufacturer') { %> invalid <% } else { %> '' <% } %> %>" type="text" name="manufacturer" id="manufacturer" value="<%= medicine.manufacturer %>">
         </div>
         <br>
         <div class="text-bar">
           <label class="right" for="sc">Salt Composition: </label>
-          <input class="left <% if(validationError  === 'sc') { %> invalid <% } else { %> '' <% } %> %>" type="text" name="sc" id="sc" value="<%= oldInput.sc %>">
+          <input class="left <% if(validationError  === 'sc') { %> invalid <% } else { %> '' <% } %> %>" type="text" name="sc" id="sc" value="<%= medicine.sc %>">
         </div>
         <br>
         <div class="text-bar">
           <label class="right" for="uses">Uses: </label>
-          <input class="left <% if(validationError  === 'uses') { %> invalid <% } else { %> '' <% } %> %>" type="text" name="uses" id="uses" value="<%= oldInput.uses %>">
+          <input class="left <% if(validationError  === 'uses') { %> invalid <% } else { %> '' <% } %> %>" type="text" name="uses" id="uses" value="<%= medicine.uses %>">
         </div>
         <br>
         <div class="text-bar">
           <label class="right" for="price">Price: </label>
-          <input class="left <% if(validationError  === 'price') { %> invalid <% } else { %> '' <% } %> %>" type="number" name="price" id="price" step="0.01" value="<%= oldInput.price %>">
+          <input class="left <% if(validationError  === 'price') { %> invalid <% } else { %> '' <% } %> %>" type="number" name="price" id="price" step="0.01" value="<%= medicine.price %>">
         </div>
+        <input type="hidden" name="ProductId" value="<%= medicine.id %>">
         <br>
         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-        <input type="submit" class="add-btn" value="add-product">
+        <input type="submit" class="add-btn" value="edit-product">
       </form>
     </div>
   </body>

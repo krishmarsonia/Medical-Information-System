@@ -1,28 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= pagetitle %></title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/public/option.css" />
+<%- include('includes/head.ejs') %>
+  <link rel="stylesheet" href="/public/option.css" />
   </head>
+
   <body>
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">MIS</a>
         </div>
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav" id="ul-bar">
           <li class="active"><a href="/">Home</a></li>
           <!-- <li><a href="#">Page 1</a></li>
-            <li><a href="#">tips of the day</a></li> -->
+          <li><a href="#">tips of the day</a></li> -->
           <li><a href="/aboutus">About us</a></li>
+          <% if(!isAuthenticated) { %>
+          <li><a id="login-right-nav-btn" href="/login">Login</a></li>
+          <li><a href="/signup">Signup</a></li>
+          <% } else { %>
+          <li>
+            <form action="/logout" method="POST">
+              
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+              <button class="logout-btn">logout</button>
+            </form>
+          </li>
+          <% } %>
+
         </ul>
       </div>
     </nav>
@@ -30,11 +33,26 @@
     <h2>select your choice</h2>
     <br>
     <br>
-    <form action="/index">
-      <input class="btn1" type="submit" value="search medicine" />
-    </form>
-    <form action="/add-medicine">
+    <div>
+      <form action="/index">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <input <% if(istheAdmin) { %> class="btn1" <% } else { %> class="btnND1" <% } %> type="submit" value="search medicine" />
+      </form>
+      <% if(istheAdmin) { %>
+      <form action="/add-medicine">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
         <input class="btn2" type="submit" value="Add medicine" />
       </form>
+      <% } %>
+      <form action="/condition">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <input <% if(istheAdmin) { %> class="btn3" <% } else { %> class="btnND3" <% } %> type="submit" value="Symptoms">
+      </form>
+      <form action="/Medicine-list">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <input <% if(istheAdmin) { %> class="btn4" <% } else { %> class="btnND4" <% } %> type="submit" value="View all Medicines">
+      </form>
+    </div>
   </body>
-</html>
+
+  </html>

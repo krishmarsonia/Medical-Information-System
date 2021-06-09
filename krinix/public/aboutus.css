@@ -6,3 +6,13 @@ img{
 h1{
     text-align: center;
 }
+.logout-btn{
+    margin-top: 13px;
+    color: #9d9d9d;
+    background-color: #222; 
+    border: solid 1px #222;
+}
+
+.logout-btn:hover{
+    color: white;
+}

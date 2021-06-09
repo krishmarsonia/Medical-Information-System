@@ -1,0 +1,29 @@
+.text-condition{
+    padding-left: 500px;
+}
+.condition-css{
+    display: block;
+    margin-top: 35px;
+    padding-right: 60px;
+}
+.condition-btn{
+    margin-top: 40px;
+    margin-left: 80px;
+    height: 45px;
+    width: 80px;
+    border-radius: 1px;
+    /* float: left; */
+    /* margin-left: 400px; */
+    background-color: #0160b3;
+    color: yellow;
+    font-weight: bold;
+}
+
+.condition-btn:hover{
+    background-color: rgb(2, 2, 138);
+}
+
+h2{
+    text-align: center;
+    margin-right: 110px;
+}

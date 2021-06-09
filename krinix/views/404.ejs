@@ -1,5 +1,5 @@
 <%- include('includes/head.ejs') %>
-<link rel="stylesheet" href="/public/index.css" />
+    <link rel="stylesheet" href="/public/index.css" />
 </head>
 <body>
     <nav class="navbar navbar-inverse">
@@ -12,6 +12,16 @@
             <!-- <li><a href="#">Page 1</a></li>
             <li><a href="#">tips of the day</a></li> -->
             <li><a href="/aboutus">About us</a></li>
+            <% if(!isAuthenticated) { %>
+              <li><a id="login-right-nav-btn" href="/login">Login</a></li>
+              <% } else { %>
+              <li>
+                <form action="/logout" method="post">
+                  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                  <button class="logout-btn">logout</button>
+                </form>
+              </li>
+              <% } %>
           </ul>
         </div>
       </nav>    

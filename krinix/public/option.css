@@ -8,14 +8,20 @@ h2{
     margin-left: 400px;
 } */
 
-.btn1{
+.forms{
+    width: 600px;
+}
+
+
+.btnND1{
     height: 70px;
     border-radius: 1px;
     float: left;
-    margin-left: 450px;
-    background-color: #013c6f;
+    margin-left: 400px;
+    background-color: #0160b3;
     color: yellow;
     font-weight: bold;
+    width: 11%;
 }
 
 .btn2{
@@ -23,19 +29,141 @@ h2{
     border-radius: 1px; 
     float: right;
     margin-right: 475px;
-    background-color: #013c6f;
+    background-color: #0160b3;
     color: yellow;
     font-weight: bold;
+    width: 11%;
 }
 
-.btn1:hover{
-    height: 72px;
-    width: 130px;
-    border: rgba(0, 143, 19, 0.747) 3px solid;
+.btnND3{
+    height: 70px;
+    border-radius: 1px; 
+    float: right;
+    /* display: block; */
+    /* padding: 10px 10px; */
+    /* margin-right: 475px; */
+    margin-right: 475px;
+    background-color: #0160b3;
+    color: yellow;
+    font-weight: bold;
+    text-align: centers;
+    width: 11%;
+    /* margin-top: 50px; */
+}
+
+.btnND4{
+    height: 70px;
+    border-radius: 1px; 
+    float: right;
+    /* display: block; */
+    padding: 10px 10px;
+    margin-right: 645px;
+    margin-top: 50px;
+    background-color: #0160b3;
+    color: yellow;
+    font-weight: bold;
+    text-align: centers;
+    width: 11%;
+}
+
+.btn1{
+    height: 70px;
+    border-radius: 1px;
+    float: left;
+    margin-left: 400px;
+    background-color: #0160b3;
+    color: yellow;
+    font-weight: bold;
+    width: 11%;
+}
+
+.btn3{
+    height: 70px;
+    border-radius: 1px; 
+    float: left;
+    /* display: block; */
+    padding: 10px 10px;
+    /* margin-right: 475px; */
+    margin-left: 400px;
+    background-color: #0160b3;
+    color: yellow;
+    font-weight: bold;
+    text-align: centers;
+    width: 11%;
+    margin-top: 50px;
+}
+
+.btn4{
+    height: 70px;
+    border-radius: 1px; 
+    float: right;
+    /* display: block; */
+    padding: 10px 10px;
+    margin-right: 475px;
+    margin-top: 50px;
+    background-color: #0160b3;
+    color: yellow;
+    font-weight: bold;
+    text-align: centers;
+    width: 11%;
+}
+
+.btn1:hover, .btnND1:hover{
+    background-color: rgb(2, 2, 138);
+    /* border: rgba(0, 143, 19, 0.747) solid; */
 }
 
 .btn2:hover{
-    height: 72px;
-    width: 120px;
-    border: rgba(0, 143, 19, 0.747) 3px solid;
+    background-color: rgb(2, 2, 138);
+}
+.btn3:hover, .btnND3:hover{
+    background-color: rgb(2, 2, 138);
+}
+.btn4:hover, .btnND4:hover{
+    background-color: rgb(2, 2, 138);
+}
+
+
+#login-right-nav-btn{
+    float: right;
+    /* margin-left: px; */
+    /* display:inline; */
+    /* margin-top: 30px; */
+}
+
+.logout-btn{
+    margin-top: 13px;
+    color: #9d9d9d;
+    background-color: #222; 
+    border: solid 1px #222;
+}
+
+.logout-btn:hover{
+    color: white;
+}
+
+
+
+
+
+@media screen and (min-width:300px) and (max-width:1000px){
+    .btn1{
+        height: 70px;
+        border-radius: 1px;
+        float: left;
+        margin-left: 45px;
+        background-color: #013c6f;
+        color: yellow;
+        font-weight: bold;
+    }
+
+    .btn2{
+        height: 70px;
+        border-radius: 1px; 
+        float: right;
+        margin-right: 45px;
+        background-color: #013c6f;
+        color: yellow;
+        font-weight: bold;
+    }
 }
