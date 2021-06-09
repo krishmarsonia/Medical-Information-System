@@ -1,5 +1,5 @@
 node_modules
-.sum.js
-.sum.test.js
-.debug.log
-.aboutus.txt
+sum.js
+sum.test.js
+debug.log
+aboutus.txt
